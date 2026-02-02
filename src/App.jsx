@@ -1,13 +1,12 @@
 import './App.css'
+import ShoppingListFull from './components/ShoppingList'
 
 function App() {
 
   return (
-    <>
-      <h1>
-        SHOPPINGLIST!
-      </h1>
-    </>
+    <main>
+      <ShoppingListFull />
+    </main>
   )
 }
 
