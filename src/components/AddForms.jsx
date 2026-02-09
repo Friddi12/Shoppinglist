@@ -1,23 +1,30 @@
-export default function AddItems(){
+export default function AddItems({setShopList}) {
 
-
-
-    const handleClick = (e) => {
+  const handleClick = (e) => {
     e.preventDefault()
-    // const uniqId = crypto.randomUUID()
-    // ((prev) => ([...prev, {id: uniqId,...task}]))
-    console.log("Submitted")
-        
+
+    
+    const form = e.target
+    const title = form.title.value
+    const total = form.quantity.value
+
+    //Hvis input felt er tomt eller mindre enn 1, så skjer ingenting (bortsett fra console.log) 
+    if (!title || total < 1) 
+    return console.log("INPUT FELT ER TOMT!")
+
+    //Pakker ut og legger til nytt objekt i listen, gir også en tilfeldig id og nullstiller formen
+    setShopList(prev => [...prev, {id: crypto.randomUUID(), title, total, bought: false}])
+    form.reset()
     }
 
-    return(
-        <form className="addform" onSubmit={handleClick}>
-            <label htmlFor="itemtitle">Vare</label>
-            <input type="text" name="title" id="itemtitle" placeholder="Feks. Brød"/>
-            <label htmlFor="quantity"></label>
-            <input type="number" id="quantity" name="quantity" min="1" defaultValue="0"/>
-            <button>Legg til vare</button>
+  return (
+    <form className="addform" onSubmit={handleClick}>
+      <label htmlFor="itemtitle">Vare</label>
+      <input type="text" name="title" id="itemtitle" />
+      <label htmlFor="quantity">Antall</label>
+      <input type="number" name="quantity" min="1" defaultValue="1" />
 
-        </form>
-    )
+      <button>Legg til vare</button>
+    </form>
+  )
 }

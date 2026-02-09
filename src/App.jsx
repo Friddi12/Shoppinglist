@@ -2,10 +2,10 @@ import './App.css'
 import './style/style.css'
 import AddItems from './components/AddForms'
 import ShoppingListFull from './components/ShoppingList'
-import { use, useState } from 'react'
+import {useState} from 'react'
 function App() {
 
-  const fullList = [
+ const fullList = [
     {
       id: 0,
       title: "Egg",
@@ -30,9 +30,9 @@ function App() {
 
   return (
     <main>
-      <h2>Shopping List</h2>
-      <AddItems/>
-      <ShoppingListFull fullList={fullList}/>
+      <h2>Handleliste</h2>
+      <AddItems setShopList={setShopList}/>
+      <ShoppingListFull fullList={shopList} setShopList={setShopList}/>
     </main>
   )
 }
