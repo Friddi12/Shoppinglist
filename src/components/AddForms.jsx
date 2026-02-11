@@ -1,3 +1,4 @@
+//Komponent for å legge til vare til listen
 export default function AddItems({setShopList}) {
 
   const handleClick = (e) => {

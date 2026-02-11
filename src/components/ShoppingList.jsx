@@ -1,3 +1,4 @@
+//Komponent som viser hele listen
 import ShopItem from "./ShoppingItem";
 
 
