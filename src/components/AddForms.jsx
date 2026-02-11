@@ -21,6 +21,7 @@ export default function AddItems({setShopList}) {
       <label htmlFor="itemtitle">Vare</label>
       <input type="text" name="title" id="itemtitle" />
       <label htmlFor="quantity">Antall</label>
+      {/* Bruker bygd inn funksjonn i HTML for å definere minimum verdi på antall varer */}
       <input type="number" name="quantity" min="1" defaultValue="1" />
 
       <button>Legg til vare</button>
