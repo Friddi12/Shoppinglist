@@ -4,7 +4,6 @@ export default function AddItems({setShopList}) {
   const handleClick = (e) => {
 
     e.preventDefault()
-
     const form = e.target
     const title = form.title.value
     const total = form.quantity.value

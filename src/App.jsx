@@ -30,7 +30,7 @@ function App() {
 
   return (
     <main>
-      <h2>Handleliste</h2>
+      <h1>Handleliste</h1>
       <AddItems setShopList={setShopList}/>
       <ShoppingListFull fullList={shopList} setShopList={setShopList}/>
     </main>

@@ -19,7 +19,7 @@ main{
     width: 300px;
     max-width: 400px;
 
-    h2{
+    h1{
         padding-left: 0.5rem;
     }
 }
