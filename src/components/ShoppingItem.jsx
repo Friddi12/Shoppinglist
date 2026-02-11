@@ -1,3 +1,4 @@
+//Komponent for hver vare i listen
 export default function ShopItem({title, total, id, bought, setShopList}){
 
 
@@ -18,6 +19,7 @@ export default function ShopItem({title, total, id, bought, setShopList}){
             <input type="checkbox" checked={bought} onChange={handleCheckboxChange} name="check" id="check"/>
             <h3>{title}</h3>
             <label htmlFor="quantity"></label>
+            {/* Bruker bygd inn funksjonn i HTML for å definere minimum verdi på antall varer */}
             <input type="number" id="quantity" name="quantity" min="1" defaultValue={total}/>
         </article>
     )

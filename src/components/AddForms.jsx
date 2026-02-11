@@ -1,8 +1,8 @@
 export default function AddItems({setShopList}) {
 
   const handleClick = (e) => {
-    e.preventDefault()
 
+    e.preventDefault()
     
     const form = e.target
     const title = form.title.value
@@ -14,8 +14,7 @@ export default function AddItems({setShopList}) {
 
     //Pakker ut og legger til nytt objekt i listen, gir også en tilfeldig id og nullstiller formen
     setShopList(prev => [...prev, {id: crypto.randomUUID(), title, total, bought: false}])
-    form.reset()
-    }
+    form.reset()}
 
   return (
     <form className="addform" onSubmit={handleClick}>

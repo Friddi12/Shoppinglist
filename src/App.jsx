@@ -10,13 +10,13 @@ function App() {
       id: 0,
       title: "Egg",
       total: 1,
-      bought: true
+      bought: false
     },
     {
       id: 1,
       title: "Melk",
       total: 2,
-      bought: false
+      bought: true
     },
     {
       id: 2,
