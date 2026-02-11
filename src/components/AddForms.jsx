@@ -3,13 +3,13 @@ export default function AddItems({setShopList}) {
   const handleClick = (e) => {
 
     e.preventDefault()
-    
+
     const form = e.target
     const title = form.title.value
     const total = form.quantity.value
 
-    //Hvis input felt er tomt eller mindre enn 1, så skjer ingenting (bortsett fra console.log) 
-    if (!title || total < 1) 
+    //Hvis input felt er tomt, så skjer ingenting (bortsett fra console.log) 
+    if (!title) 
     return console.log("INPUT FELT ER TOMT!")
 
     //Pakker ut og legger til nytt objekt i listen, gir også en tilfeldig id og nullstiller formen
